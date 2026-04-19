@@ -24,6 +24,9 @@ app.use(cors())
 app.get("/", (req, res) => {
   res.send("expense-tracker-backend API is running...");
 });
+app.get("/health", (req, res) => {
+  res.send("health");
+});
 
 // Route mounting
 app.use("/api/auth", authRoutes);
